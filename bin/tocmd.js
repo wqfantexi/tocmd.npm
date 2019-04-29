@@ -52,13 +52,14 @@ var markd_config = {
 	debug: false
 }
 
-var source_file_name = pwd + '/' + source_file
+var source_file_name = source_file;//pwd + '/' + source_file
 var file_name = source_file_name.split('/').pop()
 var _file_name = file_name.split('.')[0]
 
 if (file_name.indexOf('\\') > 0) {
 	_file_name = file_name.substring(file_name.lastIndexOf("\\")).split('.')[0]
 }
+
 var dest_file_path = pwd + '/preview/' + _file_name + '.html'
 
 console.log('pwd=' + pwd)
